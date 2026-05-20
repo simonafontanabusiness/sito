@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simona Fontana — Dott.ssa Commercialista, M&A e AI Consulting per PMI Italiane</title>
+    <meta name="description" content="Simona Fontana, Dottoressa Commercialista a Milano. Acquisizioni di PMI, passaggio generazionale, consulenza AI per imprese italiane. Call conoscitiva gratuita.">
+
+    <!-- Google Analytics — sostituisci G-XXXXXXXXXX con il tuo codice -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:           #FAFAF7;
+            --bg-warm:      #F3EDE4;
+            --bg-deep:      #1B2436;
+            --bg-white:     #FFFFFF;
+            --text:         #1B2436;
+            --text-on-dark: #F0EDE8;
+            --text-sec:     #5C6370;
+            --text-light:   #9199A3;
+            --terra:        #C45D3E;
+            --terra-soft:   rgba(196,93,62,0.07);
+            --terra-hover:  #A84E33;
+            --amber:        #E8A08C;
+            --navy:         #1B2436;
+            --border:       rgba(27,36,54,0.08);
+            --border-warm:  rgba(196,93,62,0.18);
+            --shadow-sm:    0 2px 8px rgba(27,36,54,0.04);
+            --shadow-md:    0 8px 30px rgba(27,36,54,0.08);
+            --shadow-lg:    0 16px 50px rgba(27,36,54,0.10);
+            --shadow-photo: 0 20px 60px rgba(27,36,54,0.14);
+            --radius:       14px;
+            --radius-sm:    8px;
+            --font:         'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+            --max-w:        1080px;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top:0; left:0; right:0; z-index:1000;
+            padding: 0 2.5rem; height: 60px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(250,250,247,0.92);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo { font-size:.95rem; font-weight:700; color:var(--text); text-decoration:none; letter-spacing:-0.01em; }
+        .nav-links { display:flex; gap:1.75rem; list-style:none; align-items:center; }
+        .nav-links a { text-decoration:none; color:var(--text-sec); font-size:.82rem; font-weight:500; transition:color .2s; }
+        .nav-links a:hover { color:var(--text); }
+        .nav-cta {
+            background:var(--terra) !important; color:#fff !important;
+            padding:.48rem 1.2rem; border-radius:var(--radius-sm);
+            font-weight:600 !important; transition:all .2s var(--ease) !important;
+        }
+        .nav-cta:hover { background:var(--terra-hover) !important; transform:translateY(-1px); }
+        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; z-index:1001; }
+        .hamburger span { width:22px; height:1.5px; background:var(--text); transition:all .3s; }
+        .hamburger.active span:nth-child(1) { transform:rotate(45deg) translate(4px,5px); }
+        .hamburger.active span:nth-child(2) { opacity:0; }
+        .hamburger.active span:nth-child(3) { transform:rotate(-45deg) translate(4px,-5px); }
+
+        /* ═══ BUTTONS ═══ */
+        .btn {
+            display:inline-flex; align-items:center; gap:.5rem;
+            padding:.85rem 1.6rem; border-radius:10px;
+            font-size:.9rem; font-weight:600; text-decoration:none;
+            transition:all .25s var(--ease); cursor:pointer; border:none; font-family:var(--font);
+        }
+        .btn-warm { background:var(--terra); color:#fff; }
+        .btn-warm:hover { background:var(--terra-hover); transform:translateY(-2px); box-shadow:0 8px 25px rgba(196,93,62,.2); }
+        .btn-soft { background:var(--bg-warm); color:var(--text); }
+        .btn-soft:hover { background:#EBE3D8; transform:translateY(-2px); }
+        .btn-outline { background:transparent; color:var(--text); border:1.5px solid var(--border-warm); }
+        .btn-outline:hover { border-color:var(--terra); transform:translateY(-2px); }
+        .btn-dark { background:var(--navy); color:#fff; }
+        .btn-dark:hover { background:#2D3A4F; transform:translateY(-2px); box-shadow:var(--shadow-md); }
+
+        /* ═══ SECTIONS COMMON ═══ */
+        section { padding:5.5rem 2.5rem; }
+        .section-inner { max-width:var(--max-w); margin:0 auto; }
+        .section-eyebrow { font-size:.75rem; font-weight:700; color:var(--terra); margin-bottom:.5rem; letter-spacing:.01em; }
+        .section-heading { font-size:clamp(1.65rem,3vw,2.2rem); font-weight:800; line-height:1.2; letter-spacing:-.02em; margin-bottom:.75rem; }
+        .section-sub { font-size:1rem; color:var(--text-sec); line-height:1.75; max-width:560px; }
+
+        /* ═══ HERO ═══ */
+        .hero { padding:7rem 2.5rem 4rem; background:var(--bg-warm); }
+        .hero-inner {
+            max-width:var(--max-w); margin:0 auto;
+            display:grid; grid-template-columns:1fr 380px; gap:3.5rem; align-items:center;
+        }
+        .hero-text { opacity:0; transform:translateY(30px); animation:fadeUp .9s var(--ease-out) .1s forwards; }
+        @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+        .hero-greeting { font-size:1rem; color:var(--terra); font-weight:600; margin-bottom:.65rem; }
+        .hero h1 {
+            font-size:clamp(2rem,4vw,2.8rem); font-weight:800;
+            line-height:1.18; letter-spacing:-.03em; margin-bottom:1.25rem;
+        }
+        .hero h1 .softer { color:var(--text-sec); font-weight:500; }
+        .hero-body { font-size:1.05rem; color:var(--text-sec); line-height:1.75; max-width:490px; margin-bottom:2rem; }
+        .hero-body strong { color:var(--text); font-weight:600; }
+        .hero-actions { display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; }
+        .hero-photo-col { opacity:0; transform:translateY(30px); animation:fadeUp .9s var(--ease-out) .3s forwards; }
+        .hero-photo { width:100%; aspect-ratio:3/4; border-radius:1rem; overflow:hidden; box-shadow:var(--shadow-photo); position:relative; }
+        .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+        .hero-badge {
+            position:absolute; bottom:1.25rem; left:1.25rem; right:1.25rem;
+            background:rgba(27,36,54,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+            border-radius:10px; padding:1rem 1.25rem;
+            color:var(--text-on-dark); font-size:.78rem;
+            display:flex; align-items:center; gap:.75rem;
+        }
+        .badge-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; flex-shrink:0; box-shadow:0 0 6px rgba(74,222,128,.5); }
+        .badge-text strong { display:block; font-weight:600; font-size:.85rem; }
+        .badge-text span { opacity:.65; font-size:.72rem; }
+
+        /* ═══ PROBLEMA ═══ */
+        .problema { background:var(--bg-deep); color:var(--text-on-dark); }
+        .problema-inner { max-width:var(--max-w); margin:0 auto; }
+        .problema-heading {
+            font-size:clamp(1.65rem,3vw,2.2rem); font-weight:800;
+            line-height:1.25; letter-spacing:-.02em;
+            margin-bottom:3rem; max-width:680px;
+        }
+        .problema-heading em { color:var(--amber); font-style:normal; }
+        .problema-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+        .problema-card {
+            padding:2rem 1.75rem;
+            border:1px solid rgba(255,255,255,.07);
+            border-radius:var(--radius);
+            background:rgba(255,255,255,.03);
+            transition:all .3s var(--ease);
+        }
+        .problema-card:hover { background:rgba(255,255,255,.06); border-color:rgba(196,93,62,.3); transform:translateY(-3px); }
+        .problema-card-icon { font-size:1.5rem; margin-bottom:1rem; }
+        .problema-card h3 { font-size:1rem; font-weight:700; margin-bottom:.5rem; }
+        .problema-card p { font-size:.875rem; color:rgba(240,237,232,.6); line-height:1.7; }
+        .problema-cta { margin-top:3rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+        .problema-cta p { font-size:1rem; color:rgba(240,237,232,.7); }
+        .problema-cta strong { color:var(--amber); }
+
+        /* ═══ SERVIZI ═══ */
+        .servizi { background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .servizi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:2.5rem; }
+        .svc {
+            padding:2.25rem 1.75rem;
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            background:var(--bg);
+            transition:all .3s var(--ease);
+            position:relative; overflow:hidden;
+        }
+        .svc::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:3px;
+            background:var(--terra); transform:scaleX(0); transform-origin:left;
+            transition:transform .35s var(--ease-out);
+        }
+        .svc:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--border-warm); }
+        .svc:hover::before { transform:scaleX(1); }
+        .svc-num { font-size:.7rem; font-weight:800; color:var(--terra); letter-spacing:.08em; margin-bottom:1.25rem; }
+        .svc h3 { font-size:1.1rem; font-weight:700; margin-bottom:.6rem; letter-spacing:-.01em; }
+        .svc p { font-size:.875rem; color:var(--text-sec); line-height:1.7; margin-bottom:1.25rem; }
+        .svc-tag {
+            display:inline-block; font-size:.7rem; font-weight:600; color:var(--terra);
+            padding:.28rem .7rem; background:var(--terra-soft); border-radius:100px;
+        }
+        .svc-featured {
+            background:var(--navy); border-color:var(--navy); color:var(--text-on-dark);
+        }
+        .svc-featured::before { background:var(--amber); }
+        .svc-featured h3 { color:var(--text-on-dark); }
+        .svc-featured p { color:rgba(240,237,232,.65); }
+        .svc-featured .svc-num { color:var(--amber); }
+        .svc-featured .svc-tag { background:rgba(232,160,140,.12); color:var(--amber); }
+
+        /* ═══ COME LAVORO ═══ */
+        .come-lavoro { background:var(--bg-warm); }
+        .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:2.5rem; position:relative; }
+        .steps::before {
+            content:''; position:absolute; top:28px; left:calc(12.5% + 14px); right:calc(12.5% + 14px);
+            height:1px; background:var(--border-warm); z-index:0;
+        }
+        .step { padding:0 1.25rem; text-align:center; position:relative; }
+        .step-num {
+            width:28px; height:28px; border-radius:50%;
+            background:var(--terra); color:#fff;
+            font-size:.75rem; font-weight:800;
+            display:flex; align-items:center; justify-content:center;
+            margin:0 auto 1.25rem; position:relative; z-index:1;
+        }
+        .step h3 { font-size:.95rem; font-weight:700; margin-bottom:.4rem; }
+        .step p { font-size:.82rem; color:var(--text-sec); line-height:1.6; }
+        .step-note { font-size:.72rem; color:var(--terra); font-weight:600; margin-top:.5rem; }
+
+        /* ═══ SEMINARIO ═══ */
+        .seminario { background:var(--bg-white); border-top:1px solid var(--border); }
+        .seminario-inner { max-width:var(--max-w); margin:0 auto; }
+        .seminario-layout { display:grid; grid-template-columns:1fr 420px; gap:4rem; align-items:start; margin-top:2.5rem; }
+        .seminario-body p { font-size:1rem; color:var(--text-sec); line-height:1.8; margin-bottom:1rem; }
+        .seminario-body p strong { color:var(--text); font-weight:600; }
+        .seminario-features { display:flex; flex-direction:column; gap:.6rem; margin:1.5rem 0; }
+        .seminario-feature {
+            display:flex; align-items:flex-start; gap:.75rem;
+            font-size:.9rem; color:var(--text-sec);
+        }
+        .seminario-feature::before { content:'→'; color:var(--terra); font-weight:700; flex-shrink:0; margin-top:.05rem; }
+        .seminario-card {
+            background:var(--bg-warm); border:1px solid var(--border-warm);
+            border-radius:var(--radius); padding:2rem 1.75rem;
+            position:sticky; top:80px;
+        }
+        .seminario-card h3 { font-size:1.25rem; font-weight:800; margin-bottom:.4rem; letter-spacing:-.015em; }
+        .seminario-card .subtitle { font-size:.85rem; color:var(--terra); font-weight:600; margin-bottom:1.5rem; }
+        .seminario-detail { display:flex; align-items:center; gap:.6rem; font-size:.85rem; color:var(--text-sec); margin-bottom:.6rem; }
+        .seminario-detail svg { width:16px; height:16px; color:var(--terra); flex-shrink:0; }
+        .seminario-card hr { border:none; border-top:1px solid var(--border); margin:1.25rem 0; }
+        .seminario-card .cta-note { font-size:.78rem; color:var(--text-light); text-align:center; margin-top:.75rem; }
+
+        /* ═══ CHI SONO ═══ */
+        .chi-sono { background:var(--bg); }
+        .chi-sono-layout { display:grid; grid-template-columns:1fr 340px; gap:4rem; align-items:start; margin-top:2.5rem; }
+        .chi-sono-prose p { font-size:1rem; color:var(--text-sec); line-height:1.85; margin-bottom:1.1rem; }
+        .chi-sono-prose p strong { color:var(--text); font-weight:600; }
+        .chi-sono-sidebar { display:flex; flex-direction:column; gap:1rem; position:sticky; top:80px; }
+        .sidebar-card {
+            padding:1.5rem; background:var(--bg-white);
+            border:1px solid var(--border); border-radius:var(--radius);
+            transition:all .3s var(--ease);
+        }
+        .sidebar-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border-warm); }
+        .sidebar-val { font-size:1.65rem; font-weight:800; color:var(--terra); line-height:1; margin-bottom:.2rem; }
+        .sidebar-lbl { font-size:.78rem; color:var(--text-light); font-weight:500; }
+
+        /* ═══ RISORSE ═══ */
+        .risorse { background:var(--bg-warm); border-top:1px solid var(--border); }
+        .risorse-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2.5rem; }
+        .risorsa-card {
+            padding:2.25rem 2rem; background:var(--bg-white);
+            border:1px solid var(--border); border-radius:var(--radius);
+            transition:all .3s var(--ease);
+            display:flex; flex-direction:column;
+        }
+        .risorsa-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--border-warm); }
+        .risorsa-type { font-size:.7rem; font-weight:700; color:var(--terra); letter-spacing:.06em; margin-bottom:1rem; }
+        .risorsa-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:.6rem; letter-spacing:-.01em; flex:1; }
+        .risorsa-card p { font-size:.875rem; color:var(--text-sec); line-height:1.65; margin-bottom:1.5rem; }
+        .risorsa-form { display:flex; gap:.5rem; }
+        .risorsa-form input {
+            flex:1; font-family:var(--font); font-size:.85rem; padding:.75rem 1rem;
+            background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-sm);
+            color:var(--text); outline:none; transition:border-color .2s;
+        }
+        .risorsa-form input:focus { border-color:var(--terra); }
+        .risorsa-form input::placeholder { color:var(--text-light); }
+        .risorsa-form button {
+            background:var(--terra); color:#fff; border:none; cursor:pointer;
+            padding:.75rem 1.25rem; border-radius:var(--radius-sm); font-family:var(--font);
+            font-size:.82rem; font-weight:600; transition:all .2s var(--ease); white-space:nowrap;
+        }
+        .risorsa-form button:hover { background:var(--terra-hover); }
+        .risorsa-coming {
+            display:inline-flex; align-items:center; gap:.4rem;
+            font-size:.78rem; color:var(--text-light); font-weight:500;
+            padding:.5rem 1rem; background:var(--bg); border-radius:100px;
+            border:1px solid var(--border); align-self:flex-start;
+        }
+
+        /* ═══ SOCIAL ═══ */
+        .social-section { background:var(--bg-white); border-top:1px solid var(--border); }
+        .social-links { display:flex; gap:1rem; margin-top:2.5rem; flex-wrap:wrap; }
+        .social-card {
+            flex:1; min-width:220px; padding:1.75rem 1.5rem;
+            background:var(--bg); border:1px solid var(--border);
+            border-radius:var(--radius); text-decoration:none; color:var(--text);
+            display:flex; align-items:center; gap:1rem;
+            transition:all .3s var(--ease);
+        }
+        .social-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border-warm); }
+        .social-icon {
+            width:48px; height:48px; border-radius:12px;
+            background:var(--terra-soft); display:flex; align-items:center; justify-content:center;
+            flex-shrink:0;
+        }
+        .social-icon svg { width:24px; height:24px; color:var(--terra); }
+        .social-card-text strong { display:block; font-size:1rem; font-weight:700; margin-bottom:.2rem; }
+        .social-card-text span { font-size:.8rem; color:var(--text-sec); }
+
+        /* ═══ FAQ ═══ */
+        .faq { background:var(--bg); }
+        .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2.5rem; }
+        .faq-item {
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:var(--radius); overflow:hidden;
+        }
+        .faq-question {
+            width:100%; text-align:left; padding:1.25rem 1.5rem;
+            background:none; border:none; cursor:pointer; font-family:var(--font);
+            font-size:.9rem; font-weight:600; color:var(--text);
+            display:flex; justify-content:space-between; align-items:center;
+            gap:1rem; transition:background .2s;
+        }
+        .faq-question:hover { background:var(--terra-soft); }
+        .faq-question svg { width:16px; height:16px; color:var(--terra); flex-shrink:0; transition:transform .3s var(--ease); }
+        .faq-question.open svg { transform:rotate(45deg); }
+        .faq-answer {
+            max-height:0; overflow:hidden;
+            transition:max-height .4s var(--ease-out), padding .3s;
+            padding:0 1.5rem;
+        }
+        .faq-answer.open { max-height:400px; padding:0 1.5rem 1.25rem; }
+        .faq-answer p { font-size:.875rem; color:var(--text-sec); line-height:1.75; }
+        .faq-answer p a { color:var(--terra); text-decoration:none; font-weight:500; }
+        .faq-answer p a:hover { text-decoration:underline; }
+
+        /* ═══ CONTATTI ═══ */
+        .contatti { background:var(--bg-deep); color:var(--text-on-dark); }
+        .contatti .section-eyebrow { color:var(--amber); }
+        .contatti .section-heading { color:var(--text-on-dark); }
+        .contatti .section-sub { color:rgba(240,237,232,.65); }
+        .contatti-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2.5rem; }
+        .contatti-links { display:flex; flex-direction:column; gap:.6rem; margin-bottom:2rem; }
+        .c-link {
+            display:flex; align-items:center; gap:.75rem; text-decoration:none;
+            color:var(--text-on-dark); font-size:.9rem; font-weight:500;
+            padding:1rem 1.25rem;
+            background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+            border-radius:10px; transition:all .25s var(--ease);
+        }
+        .c-link:hover { border-color:var(--terra); transform:translateX(4px); background:rgba(196,93,62,.08); }
+        .c-link svg { width:18px; height:18px; color:var(--amber); flex-shrink:0; }
+        .c-form { display:flex; flex-direction:column; gap:.6rem; }
+        .c-form input, .c-form textarea {
+            font-family:var(--font); font-size:.88rem; padding:.9rem 1.1rem;
+            background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+            border-radius:var(--radius-sm); color:var(--text-on-dark); outline:none;
+            transition:border-color .2s; width:100%;
+        }
+        .c-form input:focus, .c-form textarea:focus { border-color:var(--terra); }
+        .c-form textarea { resize:vertical; min-height:110px; }
+        .c-form input::placeholder, .c-form textarea::placeholder { color:rgba(240,237,232,.35); }
+        .c-form .privacy-note { font-size:.72rem; color:rgba(240,237,232,.4); }
+
+        /* ═══ QUOTE STRIP ═══ */
+        .quote-strip { padding:3.5rem 2.5rem; background:var(--terra); text-align:center; }
+        .quote-strip blockquote {
+            max-width:640px; margin:0 auto;
+            font-size:clamp(1.1rem,2.2vw,1.35rem); color:#fff;
+            line-height:1.65; font-weight:500;
+        }
+        .quote-strip cite { display:block; margin-top:1rem; font-size:.82rem; color:rgba(255,255,255,.7); font-style:normal; font-weight:600; }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding:2rem 2.5rem; border-top:1px solid var(--border); background:var(--bg); }
+        .footer-inner { max-width:var(--max-w); margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+        .footer-left { font-size:.75rem; color:var(--text-light); }
+        .footer-right { display:flex; align-items:center; gap:1rem; }
+        .footer-socials { display:flex; gap:.4rem; }
+        .footer-socials a {
+            width:32px; height:32px; border-radius:var(--radius-sm);
+            border:1px solid var(--border);
+            display:flex; align-items:center; justify-content:center;
+            color:var(--text-light); text-decoration:none; transition:all .2s;
+        }
+        .footer-socials a:hover { border-color:var(--terra); color:var(--terra); }
+        .footer-socials a svg { width:13px; height:13px; }
+        .footer-piva { font-size:.72rem; color:var(--text-light); }
+
+        /* ═══ REVEAL ═══ */
+        .reveal { opacity:0; transform:translateY(22px); transition:all .75s var(--ease-out); }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width:960px) {
+            .hero-inner { grid-template-columns:1fr; gap:2rem; }
+            .hero-photo-col { order:-1; max-width:280px; margin:0 auto; }
+            .hero-photo { aspect-ratio:1/1; }
+            .problema-grid { grid-template-columns:1fr; }
+            .servizi-grid { grid-template-columns:1fr; }
+            .steps { grid-template-columns:1fr 1fr; gap:2rem; }
+            .steps::before { display:none; }
+            .seminario-layout { grid-template-columns:1fr; gap:2rem; }
+            .seminario-card { position:static; }
+            .chi-sono-layout { grid-template-columns:1fr; gap:2rem; }
+            .chi-sono-sidebar { position:static; flex-direction:row; flex-wrap:wrap; }
+            .sidebar-card { flex:1; min-width:130px; }
+            .risorse-grid { grid-template-columns:1fr; }
+            .faq-grid { grid-template-columns:1fr; }
+            .contatti-grid { grid-template-columns:1fr; gap:2.5rem; }
+        }
+        @media (max-width:768px) {
+            nav { padding:0 1.5rem; }
+            .nav-links { display:none; }
+            .nav-links.open {
+                display:flex; flex-direction:column; position:fixed; inset:0;
+                background:var(--bg); justify-content:center; align-items:center; gap:2rem; z-index:1000;
+            }
+            .nav-links.open a { font-size:1.15rem; color:var(--text); }
+            .hamburger { display:flex; }
+            section { padding:3.5rem 1.5rem; }
+            .hero { padding:5.5rem 1.5rem 3rem; }
+            .quote-strip { padding:2.5rem 1.5rem; }
+            .footer-inner { flex-direction:column; gap:1rem; text-align:center; }
+            .footer-right { flex-direction:column; gap:.5rem; }
+            .hero-actions { flex-direction:column; }
+            .btn { width:100%; justify-content:center; }
+            .steps { grid-template-columns:1fr; }
+            .risorsa-form { flex-direction:column; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#" class="nav-logo">Simona Fontana</a>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#come-lavoro">Come lavoro</a></li>
+        <li><a href="#seminario">Seminario</a></li>
+        <li><a href="#chi-sono">Chi sono</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contatti" class="nav-cta">Contattami</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <p class="hero-greeting">Ciao, sono Simona.</p>
+            <h1>
+                Aiuto gli imprenditori italiani a prendere le decisioni giuste
+                <span class="softer">nei momenti che contano.</span>
+            </h1>
+            <p class="hero-body">
+                Acquisizioni di PMI, passaggio generazionale, intelligenza artificiale.
+                Sono una <strong>Dottoressa Commercialista</strong> che parla la lingua degli imprenditori,
+                non quella dei burocrati.
+            </p>
+            <div class="hero-actions">
+                <a href="https://calendly.com/simonafontana" target="_blank" class="btn btn-warm">
+                    Prenota una call gratuita
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#servizi" class="btn btn-soft">Scopri cosa faccio</a>
+            </div>
+        </div>
+        <div class="hero-photo-col">
+            <div class="hero-photo">
+                <img src="Simona_Fontana.jpg" alt="Simona Fontana, Dottoressa Commercialista e Advisor">
+                <div class="hero-badge">
+                    <div class="badge-dot"></div>
+                    <div class="badge-text">
+                        <strong>Disponibile per nuovi progetti</strong>
+                        <span>Call conoscitiva gratuita · 20 minuti</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ IL PROBLEMA ══════════ -->
+<section class="problema" id="problema">
+    <div class="problema-inner reveal">
+        <h2 class="problema-heading">
+            Le decisioni più importanti per la tua impresa<br>
+            non si prendono con un commercialista <em>qualunque.</em>
+        </h2>
+        <div class="problema-grid">
+            <div class="problema-card">
+                <div class="problema-card-icon">🏭</div>
+                <h3>Stai pensando di vendere o passare l'azienda</h3>
+                <p>Hai costruito qualcosa di importante. Vuoi farlo bene, capire quanto vale davvero, e non lasciare nulla al caso. Ma non sai da dove iniziare.</p>
+            </div>
+            <div class="problema-card">
+                <div class="problema-card-icon">🤝</div>
+                <h3>Vuoi acquisire un'altra azienda</h3>
+                <p>Hai individuato un'opportunità nel mercato, o vuoi crescere per linee esterne. Hai bisogno di qualcuno che sappia valutare, negoziare e strutturare l'operazione.</p>
+            </div>
+            <div class="problema-card">
+                <div class="problema-card-icon">🤖</div>
+                <h3>Senti che l'AI cambierà tutto, ma non sai come</h3>
+                <p>Ogni giorno senti parlare di intelligenza artificiale. Vuoi capire cosa significa concretamente per la tua impresa, senza hype e senza perdere tempo.</p>
+            </div>
+        </div>
+        <div class="problema-cta">
+            <p>Se ti riconosci in uno di questi scenari, <strong>sei nel posto giusto.</strong></p>
+            <a href="#contatti" class="btn btn-warm">Parliamone</a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ SERVIZI ══════════ -->
+<section class="servizi" id="servizi">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Cosa faccio</p>
+            <h2 class="section-heading">Non faccio tutto. Faccio bene tre cose.</h2>
+            <p class="section-sub">Scelgo i progetti in cui posso creare valore reale. Questo mi permette di seguirti con la giusta attenzione.</p>
+        </div>
+        <div class="servizi-grid">
+            <div class="svc reveal">
+                <div class="svc-num">01</div>
+                <h3>Acquisizioni e M&A</h3>
+                <p>Identifico PMI italiane con potenziale inespresso, valuto opportunità nel lower mid-market e supporto operazioni di acquisizione dall'analisi alla firma. Se stai pensando di vendere la tua azienda, posso aiutarti a capire come prepararla e cosa aspettarti.</p>
+                <span class="svc-tag">Passaggio generazionale</span>
+            </div>
+            <div class="svc svc-featured reveal" style="transition-delay:.08s;">
+                <div class="svc-num">02</div>
+                <h3>Consulenza AI per Imprese</h3>
+                <p>Aiuto le PMI italiane ad adottare l'intelligenza artificiale in modo concreto: automazione dei processi, efficienza operativa, nuovi vantaggi competitivi. Senza promesse irrealistiche, con risultati misurabili.</p>
+                <span class="svc-tag">Strategia e adozione</span>
+            </div>
+            <div class="svc reveal" style="transition-delay:.16s;">
+                <div class="svc-num">03</div>
+                <h3>Studio di Commercialisti</h3>
+                <p>Gestisco Studio Borri Marazzi in provincia di Varese. Consulenza contabile e fiscale completa per imprenditori e società. Dalla contabilità ordinaria alla pianificazione fiscale, con un occhio sempre alla crescita del tuo business.</p>
+                <span class="svc-tag">Milano · Studio Borri Marazzi</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ COME LAVORO ══════════ -->
+<section class="come-lavoro" id="come-lavoro">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Come lavoro</p>
+            <h2 class="section-heading">Dal primo contatto al risultato</h2>
+            <p class="section-sub">Ogni progetto inizia da una conversazione. Il primo passo non ti costa nulla.</p>
+        </div>
+        <div class="steps reveal" style="transition-delay:.1s;">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Call conoscitiva</h3>
+                <p>20 minuti gratuiti per capire la tua situazione e vedere se posso aiutarti davvero.</p>
+                <p class="step-note">Gratuito · 20 min</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Analisi</h3>
+                <p>Approfondisco la tua situazione specifica: azienda, mercato, obiettivi. E ti dico chiaramente cosa vedo.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Proposta</h3>
+                <p>Ti presento un piano chiaro: cosa facciamo, come lo facciamo, quanto ci vuole.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Esecuzione</h3>
+                <p>Lavoro al tuo fianco fino al risultato. Resto presente per tutta la durata del progetto.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ QUOTE ══════════ -->
+<div class="quote-strip reveal">
+    <blockquote>
+        "Il mio lavoro non è dirti cosa fare. È assicurarmi che tu abbia tutte le informazioni per decidere con chiarezza."
+        <cite>— Simona Fontana</cite>
+    </blockquote>
+</div>
+
+<!-- ══════════ SEMINARIO ══════════ -->
+<section class="seminario" id="seminario">
+    <div class="seminario-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Formazione</p>
+            <h2 class="section-heading">Dall'altra parte del tavolo</h2>
+            <p class="section-sub">Il seminario per imprenditori e successori che vogliono capire come ragiona davvero chi compra un'azienda — prima di sedersi a trattare.</p>
+        </div>
+        <div class="seminario-layout">
+            <div class="seminario-body reveal">
+                <p>
+                    La maggior parte delle trattative per la vendita o il passaggio di un'azienda fallisce non per i numeri,
+                    ma perché le due parti non si capiscono. Chi vende pensa al valore di ciò che ha costruito.
+                    Chi compra guarda i flussi futuri, i rischi e le opportunità di miglioramento.
+                </p>
+                <p>
+                    <strong>Dall'altra parte del tavolo</strong> è un seminario pratico di 3,5 ore in cui ti mostro
+                    come ragiona un acquirente — che sia un fondo di private equity, un imprenditore industriale
+                    o un giovane con un search fund — e come puoi prepararti per affrontare la trattativa
+                    da una posizione di consapevolezza e forza.
+                </p>
+                <p>Non è un corso teorico. È una sessione di lavoro con scenari reali, domande vere e strumenti concreti che porti a casa.</p>
+                <div class="seminario-features">
+                    <div class="seminario-feature">I tre profili di acquirente più comuni — PE, industriale, ETA/search fund — e come ragiona ciascuno</div>
+                    <div class="seminario-feature">Cosa guardano davvero nei tuoi bilanci: non i numeri, ma le storie che raccontano</div>
+                    <div class="seminario-feature">Come valutare un'offerta, cosa si negozia e cosa non si negozia mai</div>
+                    <div class="seminario-feature">Il lato emotivo del passaggio: identità, paura, aspettative familiari — e come affrontarli</div>
+                    <div class="seminario-feature">I prossimi passi concreti: esci dal seminario con un piano d'azione per la tua situazione</div>
+                </div>
+                <p>Per imprenditori che stanno valutando un'uscita e per chi riceverà un'azienda in eredità o successione. Ogni partecipante porta a casa un one-pager con i punti chiave e le azioni immediate.</p>
+            </div>
+            <div class="reveal" style="transition-delay:.1s;">
+                <div class="seminario-card">
+                    <h3>Dall'altra parte del tavolo</h3>
+                    <p class="subtitle">Seminario sul passaggio generazionale</p>
+                    <div class="seminario-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        3,5 ore · formato intensivo
+                    </div>
+                    <div class="seminario-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Provincia di Varese
+                    </div>
+                    <div class="seminario-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Imprenditori e successori
+                    </div>
+                    <hr>
+                    <p style="font-size:.82rem; color:var(--text-sec); margin-bottom:1.25rem;">Prossima data in definizione. Scrivimi per ricevere informazioni e riservare il tuo posto.</p>
+                    <a href="mailto:simona@simonafontana.com?subject=Seminario Dall'altra parte del tavolo" class="btn btn-warm" style="width:100%; justify-content:center;">
+                        Voglio saperne di più
+                    </a>
+                    <p class="cta-note">Rispondo entro 24 ore</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ CHI SONO ══════════ -->
+<section class="chi-sono" id="chi-sono">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Chi sono</p>
+            <h2 class="section-heading">Non sono la commercialista di una volta</h2>
+            <p class="section-sub">Ho fatto un percorso poco lineare. E questo, per te, è un vantaggio.</p>
+        </div>
+        <div class="chi-sono-layout">
+            <div class="chi-sono-prose reveal">
+                <p>
+                    Sono <strong>Dottoressa Commercialista</strong> iscritta all'Albo, ma il mio percorso non è stato quello classico. 
+                    Dopo la laurea in Finanza all'<strong>Università Bocconi</strong>, sono andata a <strong>Londra in J.P. Morgan</strong>, 
+                    poi a Milano in <strong>EY</strong>. Potevo restare lì.
+                </p>
+                <p>
+                    Invece ho fondato due startup. Ho capito cosa significa rischiare in prima persona,
+                    prendere decisioni con informazioni incomplete, e costruire qualcosa da zero.
+                </p>
+                <p>
+                    Oggi gestisco <strong>Studio Borri Marazzi</strong>, uno studio di commercialisti in provincia di Varese, 
+                    e mi concentro su quello che so fare meglio: accompagnare gli imprenditori nelle scelte 
+                    più importanti per la loro azienda.
+                </p>
+                <p>
+                    Ho presentato temi di finanza e innovazione alla <strong>Bocconi</strong> e al <strong>Politecnico di Milano</strong>. 
+                    Ho fatto mentoring in acceleratori internazionali. Ho imparato a leggere i bilanci 
+                    con gli occhi di chi investe, non solo di chi certifica.
+                </p>
+                <p>
+                    Questo è quello che porto con me ogni volta che mi siedo dall'altra parte del tavolo con un imprenditore.
+                </p>
+            </div>
+            <div class="chi-sono-sidebar reveal" style="transition-delay:.1s;">
+                <div class="sidebar-card">
+                    <div class="sidebar-val">10+</div>
+                    <div class="sidebar-lbl">Anni di esperienza in finanza e impresa</div>
+                </div>
+                <div class="sidebar-card">
+                    <div class="sidebar-val">2</div>
+                    <div class="sidebar-lbl">Startup fondate</div>
+                </div>
+                <div class="sidebar-card">
+                    <div class="sidebar-val">$25M</div>
+                    <div class="sidebar-lbl">ICO gestito</div>
+                </div>
+                <div class="sidebar-card">
+                    <div class="sidebar-val">&lt;9m</div>
+                    <div class="sidebar-lbl">Tempo dall'avvio all'exit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ══════════ SOCIAL ══════════ -->
+<section class="social-section" id="social">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Seguimi</p>
+            <h2 class="section-heading">Contenuti ogni settimana su M&A, impresa e AI</h2>
+            <p class="section-sub">Parlo di acquisizioni di PMI, passaggio generazionale e intelligenza artificiale per imprese. Senza filtri, con un punto di vista preciso.</p>
+        </div>
+        <div class="social-links reveal" style="transition-delay:.1s;">
+            <a href="https://www.linkedin.com/in/simonafontana" target="_blank" rel="noopener" class="social-card">
+                <div class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div class="social-card-text">
+                    <strong>LinkedIn</strong>
+                    <span>Analisi e opinioni sul mercato M&A e PMI italiane</span>
+                </div>
+            </a>
+            <a href="https://www.tiktok.com/@simonafontana" target="_blank" rel="noopener" class="social-card">
+                <div class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.84a4.84 4.84 0 01-1-.15z"/></svg>
+                </div>
+                <div class="social-card-text">
+                    <strong>TikTok</strong>
+                    <span>Come funzionano davvero le acquisizioni d'azienda</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq" id="faq">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Domande frequenti</p>
+            <h2 class="section-heading">Quello che le persone mi chiedono di più</h2>
+            <p class="section-sub">Risposte dirette alle domande più comuni. Se la tua non c'è, scrivimi.</p>
+        </div>
+        <div class="faq-grid reveal" style="transition-delay:.1s;">
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Da dove si inizia se voglio vendere la mia azienda?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Il primo passo è capire quanto vale la tua azienda e in che condizioni si trova per un potenziale acquirente. Prima di mettere qualsiasi cosa sul mercato, faccio un'analisi della situazione attuale: bilanci, struttura, clienti, dipendenti, eventuali criticità. Da lì si costruisce una strategia. La call conoscitiva gratuita è il modo più semplice per iniziare: <a href="https://calendly.com/simonafontana" target="_blank">prenota qui</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Quanto vale la mia azienda?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Dipende da molti fattori: settore, fatturato, margini, dipendenza dal fondatore, clienti, prospettive di crescita. I metodi di valutazione più usati per le PMI sono i multipli dell'EBITDA e i flussi di cassa attualizzati. Ma il prezzo reale lo fa il mercato: un'azienda vale quello che un acquirente motivato è disposto a pagare. Posso fare una valutazione preliminare durante la nostra prima conversazione.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Cosa significa passaggio generazionale e come funziona?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Il passaggio generazionale è il trasferimento di un'azienda dalla generazione che l'ha costruita a quella successiva — che sia un familiare, un manager interno, o un acquirente esterno. È uno dei momenti più delicati nella vita di un'impresa perché unisce aspetti finanziari, fiscali, legali e soprattutto emotivi. In Italia, molte aziende non sopravvivono al passaggio non perché non valgano, ma perché non vengono preparate per tempo. Il mio seminario <em>Dall'altra parte del tavolo</em> è pensato proprio per questo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Cos'è un search fund e lavori con chi ne avvia uno?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Un search fund è un veicolo di investimento in cui un imprenditore (il "searcher") raccoglie capitale da investitori per cercare, acquisire e gestire un'unica PMI. È un modello molto diffuso negli USA e in crescita in Italia. Lavoro con searcher che operano nel mercato italiano, sia nella fase di ricerca e valutazione dei target, sia nella due diligence finanziaria. Se stai avviando un search fund o sei un investitore interessato a questo mercato, <a href="mailto:simona@simonafontana.com">scrivimi</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Lavori con investitori e fondi?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Sì. Collaboro con investitori privati, family office e operatori di private equity che cercano opportunità nel lower mid-market italiano. Posso supportare la fase di deal sourcing, valutazione dei target, analisi finanziaria e strutturazione dell'operazione. Se rappresenti un fondo o un investitore interessato al mercato delle PMI italiane, <a href="mailto:simona@simonafontana.com">contattami direttamente</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Lavori con broker M&A o intermediari?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Sì, sono aperta a collaborazioni con broker M&A e intermediari che operano nel segmento PMI. Posso intervenire come advisor finanziario e fiscale nelle operazioni che segui, o come referente per clienti che stanno valutando un'uscita. Se lavori in questo settore e vedi opportunità di collaborazione, <a href="mailto:simona@simonafontana.com">scrivimi</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Come posso usare l'AI nella mia azienda?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Dipende dal tuo settore e dai processi attuali. L'AI non è una soluzione universale, ma ci sono aree dove quasi tutte le PMI possono trarre vantaggio: automazione di attività ripetitive, analisi dei dati, customer service, marketing e comunicazione, gestione documentale. Il primo passo è capire dove il tuo tempo e quello dei tuoi dipendenti va sprecato. Poi si valuta cosa si può automatizzare con strumenti esistenti — spesso senza grandi investimenti.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Cosa fa esattamente Studio Borri Marazzi?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Studio Borri Marazzi è uno studio di commercialisti in provincia di Varese che segue imprenditori e società con servizi di contabilità ordinaria, dichiarazioni fiscali, consulenza IVA, pianificazione fiscale, gestione paghe e rapporti con l'Agenzia delle Entrate. Se cerchi uno studio di commercialisti in provincia di Varese, <a href="mailto:simona@simonafontana.com">contattami</a> per un primo incontro conoscitivo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    La call conoscitiva è davvero gratuita?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Sì, senza condizioni. Sono 20 minuti in cui mi racconti la tua situazione e io ti dico onestamente se posso aiutarti e come. Se non sono la persona giusta per te, te lo dico subito — e magari ti indirizzo a chi lo è. Puoi prenotare direttamente su <a href="https://calendly.com/simonafontana" target="_blank">Calendly</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Lavori solo a Milano o anche altrove?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Lo studio di commercialisti è in provincia di Varese. Per i servizi di advisory M&A e consulenza AI lavoro in tutta Italia — la maggior parte degli incontri si possono gestire da remoto, con presenza fisica quando serve. Il seminario sul passaggio generazionale si tiene in provincia di Varese.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ CONTATTI ══════════ -->
+<section class="contatti" id="contatti">
+    <div class="section-inner">
+        <div class="reveal">
+            <p class="section-eyebrow">Contatti</p>
+            <h2 class="section-heading">Parliamo.</h2>
+            <p class="section-sub">Il modo più rapido è prenotare una call conoscitiva gratuita di 20 minuti. Se preferisci scrivere, rispondo entro 24 ore.</p>
+        </div>
+        <div class="contatti-grid">
+            <div class="reveal">
+                <div class="contatti-links">
+                    <a href="https://calendly.com/simonafontana" target="_blank" class="c-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        Prenota una call gratuita — 20 minuti
+                    </a>
+                    <a href="mailto:simona@simonafontana.com" class="c-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                        simona@simonafontana.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/simonafontana" target="_blank" class="c-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Simona Fontana su LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay:.1s;">
+                <!-- Netlify form -->
+                <form class="c-form" name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contatti">
+                    <input type="hidden" name="bot-field">
+                    <input type="text" name="nome" placeholder="Nome e cognome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="azienda" placeholder="Azienda (facoltativo)">
+                    <input type="text" name="oggetto" placeholder="Di cosa hai bisogno?">
+                    <textarea name="messaggio" placeholder="Raccontami la tua situazione..." rows="4"></textarea>
+                    <button type="submit" class="btn btn-warm" style="width:100%; justify-content:center;">
+                        Invia messaggio
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="privacy-note">I tuoi dati sono al sicuro. Non li condivido con nessuno e non faccio spam.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-left">
+            &copy; 2026 Simona Fontana · Dott.ssa Commercialista
+        </div>
+        <div class="footer-right">
+            <span class="footer-piva">P.IVA 03603700125</span>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/simonafontana" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@simonafontana" target="_blank" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.84a4.84 4.84 0 01-1-.15z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Nav hamburger
+    function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('open');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-links').classList.remove('open');
+            document.querySelector('.hamburger').classList.remove('active');
+        });
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        // Chiudi tutti
+        document.querySelectorAll('.faq-question.open').forEach(q => {
+            q.classList.remove('open');
+            q.nextElementSibling.classList.remove('open');
+        });
+        // Apri questo se era chiuso
+        if (!isOpen) {
+            btn.classList.add('open');
+            answer.classList.add('open');
+        }
+    }
+</script>
+
+</body>
+</html>
