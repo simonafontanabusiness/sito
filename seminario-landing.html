@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dall'altra parte del tavolo — Seminario per imprenditori</title> 
-  <!-- Google tag (gtag.js) -->
+<title>Dall'altra parte del tavolo — Seminario per imprenditori</title>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPSYE677Q3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MPSYE677Q3');
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -578,7 +577,7 @@
     <div class="hero-meta-item"><span class="dot"></span> Provincia di Varese</div>
     <div class="hero-meta-item"><span class="dot"></span> Max 10 partecipanti</div>
   </div>
-  <a href="#iscrizione" class="btn-primary">Prenota il tuo posto</a>
+  <a href="#iscrizione" class="btn-primary" onclick="document.getElementById('iscrizione').scrollIntoView({behavior:'smooth'}); return false;">Prenota il tuo posto →</a>
   <p class="hero-price-note">€ 97 + IVA &nbsp;·&nbsp; Posti limitati</p>
 </section>
 
@@ -668,7 +667,7 @@
 <!-- CHI SONO -->
 <section class="section chi-sono">
   <div class="chi-sono-inner">
-    <img src="Simona_Fontana.jpg" alt="Simona Fontana" class="chi-sono-img">
+    <div class="chi-sono-img-placeholder">foto</div>
     <div>
       <span class="label">Chi conduce il seminario</span>
       <h2>Simona Fontana</h2>
@@ -703,10 +702,33 @@
           <li>Materiali di supporto da portare a casa</li>
           <li>Massimo 10 partecipanti — lavoro su casi reali</li>
         </ul>
-        <a href="mailto:simona@simonafontana.com?subject=Iscrizione%20seminario%20Dall'altra%20parte%20del%20tavolo" class="prezzo-cta">
-          Prenota il tuo posto →
-        </a>
-        <p class="prezzo-note">Scrivi a simona@simonafontana.com</p>
+        <form name="iscrizione-seminario" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top: 8px;">
+          <input type="hidden" name="form-name" value="iscrizione-seminario">
+          <p style="display:none"><input name="bot-field"></p>
+          <div style="margin-bottom: 12px;">
+            <input type="text" name="nome" placeholder="Nome e cognome" required
+              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
+          </div>
+          <div style="margin-bottom: 12px;">
+            <input type="email" name="email" placeholder="Email" required
+              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <input type="text" name="azienda" placeholder="Azienda (facoltativo)"
+              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
+          </div>
+          <div style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 10px;">
+            <input type="checkbox" name="consenso" id="consenso" required
+              style="margin-top: 3px; flex-shrink: 0; accent-color: #C4603A;">
+            <label for="consenso" style="font-size: 0.8rem; color: #7a7a7a; line-height: 1.5;">
+              Ho letto e accetto la <a href="/privacy.html" target="_blank" style="color: #C4603A;">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali per ricevere informazioni sul seminario.
+            </label>
+          </div>
+          <button type="submit" class="prezzo-cta" style="border: none; cursor: pointer; width: 100%;">
+            Prenota il tuo posto →
+          </button>
+        </form>
+        <p class="prezzo-note">Ti rispondo entro 24 ore con le istruzioni per il pagamento (bonifico).</p>
       </div>
     </div>
   </div>
@@ -772,10 +794,14 @@
 <section class="footer-cta">
   <h2>Prenota il tuo posto.</h2>
   <p>Massimo 10 partecipanti. Prima edizione, provincia di Varese.</p>
-  <a href="mailto:simona@simonafontana.com?subject=Iscrizione%20seminario%20Dall'altra%20parte%20del%20tavolo" class="btn-primary">
-    Scrivi a Simona →
+  <a href="#iscrizione" class="btn-primary">
+    Prenota il tuo posto →
   </a>
-  <div class="footer-note">simonafontana.com · Dott.ssa Commercialista · P.IVA 03603700125</div>
+  <div class="footer-note">simonafontana.com · Dott.ssa Commercialista · P.IVA 03603700125<br>
+  <a href="/privacy.html" target="_blank" style="color: rgba(255,255,255,0.3); text-decoration: underline;">Privacy Policy</a>
+  &nbsp;·&nbsp;
+  <a href="/cookie.html" target="_blank" style="color: rgba(255,255,255,0.3); text-decoration: underline;">Cookie Policy</a>
+  </div>
 </section>
 
 </body>
