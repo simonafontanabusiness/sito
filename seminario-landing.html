@@ -667,7 +667,7 @@
 <!-- CHI SONO -->
 <section class="section chi-sono">
   <div class="chi-sono-inner">
-    <div class="chi-sono-img-placeholder">foto</div>
+    <img src="Simona_Fontana.jpg" alt="Simona Fontana" class="chi-sono-img">
     <div>
       <span class="label">Chi conduce il seminario</span>
       <h2>Simona Fontana</h2>
@@ -702,8 +702,9 @@
           <li>Materiali di supporto da portare a casa</li>
           <li>Massimo 10 partecipanti — lavoro su casi reali</li>
         </ul>
-        <form name="iscrizione-seminario" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top: 8px;">
+        <form id="form-iscrizione" name="iscrizione-seminario" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top: 8px;">
           <input type="hidden" name="form-name" value="iscrizione-seminario">
+          <input type="hidden" name="subject" value="Nuova iscrizione: Dall'altra parte del tavolo">
           <p style="display:none"><input name="bot-field"></p>
           <div style="margin-bottom: 12px;">
             <input type="text" name="nome" placeholder="Nome e cognome" required
@@ -724,11 +725,38 @@
               Ho letto e accetto la <a href="/privacy.html" target="_blank" style="color: #C4603A;">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali per ricevere informazioni sul seminario.
             </label>
           </div>
-          <button type="submit" class="prezzo-cta" style="border: none; cursor: pointer; width: 100%;">
+          <button type="submit" id="btn-submit" class="prezzo-cta" style="border: none; cursor: pointer; width: 100%;">
             Prenota il tuo posto →
           </button>
         </form>
+        <div id="form-success" style="display:none; background: #f0faf0; border: 1.5px solid #4caf50; border-radius: 3px; padding: 20px; text-align: center; margin-top: 8px;">
+          <p style="color: #2e7d32; font-weight: 700; font-size: 1rem; margin-bottom: 6px;">Richiesta inviata!</p>
+          <p style="color: #4a4a4a; font-size: 0.88rem;">Ti rispondo entro 24 ore con le istruzioni per il pagamento.</p>
+        </div>
         <p class="prezzo-note">Ti rispondo entro 24 ore con le istruzioni per il pagamento (bonifico).</p>
+        <script>
+          document.getElementById('form-iscrizione').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = document.getElementById('btn-submit');
+            btn.disabled = true;
+            btn.textContent = 'Invio in corso…';
+            fetch(window.location.pathname, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(new FormData(form)).toString()
+            })
+            .then(function() {
+              form.style.display = 'none';
+              document.getElementById('form-success').style.display = 'block';
+            })
+            .catch(function() {
+              btn.disabled = false;
+              btn.textContent = 'Prenota il tuo posto →';
+              alert('Si è verificato un errore. Riprova o scrivimi direttamente a simona20fontana@gmail.com');
+            });
+          });
+        </script>
       </div>
     </div>
   </div>
