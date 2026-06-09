@@ -702,61 +702,8 @@
           <li>Materiali di supporto da portare a casa</li>
           <li>Massimo 10 partecipanti — lavoro su casi reali</li>
         </ul>
-        <form id="form-iscrizione" name="iscrizione-seminario" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top: 8px;">
-          <input type="hidden" name="form-name" value="iscrizione-seminario">
-          <input type="hidden" name="subject" value="Nuova iscrizione: Dall'altra parte del tavolo">
-          <p style="display:none"><input name="bot-field"></p>
-          <div style="margin-bottom: 12px;">
-            <input type="text" name="nome" placeholder="Nome e cognome" required
-              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
-          </div>
-          <div style="margin-bottom: 12px;">
-            <input type="email" name="email" placeholder="Email" required
-              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
-          </div>
-          <div style="margin-bottom: 16px;">
-            <input type="text" name="azienda" placeholder="Azienda (facoltativo)"
-              style="width:100%; padding: 12px 14px; border: 1.5px solid #e0d8d0; border-radius: 3px; font-family: inherit; font-size: 0.92rem; outline: none; color: #1a1a1a;">
-          </div>
-          <div style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 10px;">
-            <input type="checkbox" name="consenso" id="consenso" required
-              style="margin-top: 3px; flex-shrink: 0; accent-color: #C4603A;">
-            <label for="consenso" style="font-size: 0.8rem; color: #7a7a7a; line-height: 1.5;">
-              Ho letto e accetto la <a href="/privacy.html" target="_blank" style="color: #C4603A;">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali per ricevere informazioni sul seminario.
-            </label>
-          </div>
-          <button type="submit" id="btn-submit" class="prezzo-cta" style="border: none; cursor: pointer; width: 100%;">
-            Prenota il tuo posto →
-          </button>
-        </form>
-        <div id="form-success" style="display:none; background: #f0faf0; border: 1.5px solid #4caf50; border-radius: 3px; padding: 20px; text-align: center; margin-top: 8px;">
-          <p style="color: #2e7d32; font-weight: 700; font-size: 1rem; margin-bottom: 6px;">Richiesta inviata!</p>
-          <p style="color: #4a4a4a; font-size: 0.88rem;">Ti rispondo entro 24 ore con le istruzioni per il pagamento.</p>
-        </div>
+        <iframe width="100%" height="520" src="https://ce3f5fcc.sibforms.com/v2/serve/MUIFAJHyoHU19UL-d4e_K75RBjBn3M4AJf6a98rp4qnI6pda9e6BzfMV846x2vPY4YaL9Ic7BPapqlq2HVn0xaO5AcklqenoByNylDVxJNLBZuLWIuy_YC0cXtBUdBb3ZWpLCN2mgC-tbiiY1nBnpP8HyKh-tgDkyi_N0FnNUpW77dha8PY4rIrH21rFQD3M3kwMFMdPzcWaLigWOA==" frameborder="0" scrolling="auto" allowfullscreen style="display:block; margin: 8px auto 0; max-width:100%; border-radius:3px;"></iframe>
         <p class="prezzo-note">Ti rispondo entro 24 ore con le istruzioni per il pagamento (bonifico).</p>
-        <script>
-          document.getElementById('form-iscrizione').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var form = this;
-            var btn = document.getElementById('btn-submit');
-            btn.disabled = true;
-            btn.textContent = 'Invio in corso…';
-            fetch(window.location.pathname, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(new FormData(form)).toString()
-            })
-            .then(function() {
-              form.style.display = 'none';
-              document.getElementById('form-success').style.display = 'block';
-            })
-            .catch(function() {
-              btn.disabled = false;
-              btn.textContent = 'Prenota il tuo posto →';
-              alert('Si è verificato un errore. Riprova o scrivimi direttamente a simona20fontana@gmail.com');
-            });
-          });
-        </script>
       </div>
     </div>
   </div>
@@ -831,6 +778,7 @@
   <a href="/cookie.html" target="_blank" style="color: rgba(255,255,255,0.3); text-decoration: underline;">Cookie Policy</a>
   </div>
 </section>
+
 
 </body>
 </html>
