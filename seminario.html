@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosa pensa davvero chi compra la tua azienda — Seminario | Simona Fontana</title>
+    <meta name="description" content="Seminario per imprenditori: 2 ore per capire la logica degli acquirenti, leggere i tuoi bilanci con i loro occhi e arrivare al tavolo preparato. Provincia di Varese, massimo 10 partecipanti.">
+
+    <meta property="og:title" content="Cosa pensa davvero chi compra la tua azienda">
+    <meta property="og:description" content="2 ore per capire la logica degli acquirenti, leggere i tuoi bilanci con i loro occhi e arrivare al tavolo preparato. Prima edizione, provincia di Varese.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simonafontana.com/seminario.html">
+    <meta property="og:image" content="https://simonafontana.com/Simona_Fontana.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Analytics viene caricato da cookie-consent.js solo dopo il consenso -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:           #FAFAF7;
+            --bg-warm:      #F3EDE4;
+            --bg-deep:      #1B2436;
+            --bg-white:     #FFFFFF;
+            --text:         #1B2436;
+            --text-on-dark: #F0EDE8;
+            --text-sec:     #5C6370;
+            --text-light:   #9199A3;
+            --terra:        #C45D3E;
+            --terra-soft:   rgba(196,93,62,0.07);
+            --terra-hover:  #A84E33;
+            --amber:        #E8A08C;
+            --green:        #3F7D5C;
+            --border:       rgba(27,36,54,0.08);
+            --border-warm:  rgba(196,93,62,0.18);
+            --shadow-sm:    0 2px 8px rgba(27,36,54,0.04);
+            --shadow-md:    0 8px 30px rgba(27,36,54,0.08);
+            --shadow-photo: 0 20px 60px rgba(27,36,54,0.14);
+            --radius:       14px;
+            --font:         'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+            --max-w:        860px;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family:var(--font); background:var(--bg); color:var(--text);
+            line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+        }
+
+        /* ═══ TOP BAR ═══ */
+        .topbar {
+            height:56px; display:flex; align-items:center; justify-content:space-between;
+            padding:0 1.75rem; border-bottom:1px solid var(--border); background:var(--bg);
+        }
+        .topbar a { text-decoration:none; }
+        .topbar-logo { font-size:.9rem; font-weight:700; color:var(--text); letter-spacing:-.01em; }
+        .topbar-back { font-size:.78rem; color:var(--text-light); font-weight:500; }
+        .topbar-back:hover { color:var(--terra); }
+
+        /* ═══ SECTIONS ═══ */
+        section { padding:4.5rem 1.75rem; }
+        .inner { max-width:var(--max-w); margin:0 auto; }
+        .eyebrow {
+            font-size:.72rem; font-weight:700; color:var(--terra);
+            letter-spacing:.08em; text-transform:uppercase; margin-bottom:.9rem;
+        }
+        h2 {
+            font-size:clamp(1.55rem,3.2vw,2.1rem); font-weight:800;
+            line-height:1.18; letter-spacing:-.025em; margin-bottom:1.25rem;
+        }
+        p { font-size:1rem; color:var(--text-sec); line-height:1.85; margin-bottom:1.1rem; }
+        p strong { color:var(--text); font-weight:600; }
+
+        .btn {
+            display:inline-flex; align-items:center; gap:.5rem;
+            padding:1rem 2rem; border-radius:10px;
+            font-size:.95rem; font-weight:700; text-decoration:none;
+            background:var(--terra); color:#fff;
+            transition:all .25s var(--ease); border:none; cursor:pointer; font-family:var(--font);
+        }
+        .btn:hover { background:var(--terra-hover); transform:translateY(-2px); box-shadow:0 10px 28px rgba(196,93,62,.22); }
+
+        /* ═══ HERO ═══ */
+        .hero { background:var(--bg-warm); padding:4rem 1.75rem 4rem; }
+        .hero-label {
+            font-size:.85rem; font-weight:600; color:var(--text-sec); margin-bottom:.5rem;
+        }
+        .hero h1 {
+            font-size:clamp(2rem,5.2vw,3.1rem); font-weight:800;
+            line-height:1.12; letter-spacing:-.035em; margin-bottom:1.25rem;
+        }
+        .hero-sub {
+            font-size:clamp(1rem,2vw,1.15rem); color:var(--text-sec);
+            line-height:1.75; max-width:620px; margin-bottom:2rem;
+        }
+        .hero-meta { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:2.25rem; }
+        .chip {
+            display:inline-flex; align-items:center; gap:.45rem;
+            font-size:.8rem; font-weight:600; color:var(--text);
+            background:var(--bg-white); border:1px solid var(--border-warm);
+            border-radius:100px; padding:.5rem 1rem;
+        }
+        .chip svg { width:14px; height:14px; color:var(--terra); flex-shrink:0; }
+        .hero-note { font-size:.82rem; color:var(--text-light); margin:.9rem 0 0; }
+
+        /* ═══ PROBLEMA ═══ */
+        .why { background:var(--bg-deep); color:var(--text-on-dark); }
+        .why .eyebrow { color:var(--amber); }
+        .why h2 { color:var(--text-on-dark); max-width:660px; }
+        .why h2 span { color:var(--amber); }
+        .why p { color:rgba(240,237,232,.68); }
+        .why p strong { color:var(--text-on-dark); }
+        .why p:last-child { margin-bottom:0; }
+
+        /* ═══ PROGRAMMA ═══ */
+        .programma { background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .modules { display:flex; flex-direction:column; gap:1rem; margin-top:2rem; }
+        .module {
+            display:flex; gap:1.25rem; align-items:flex-start;
+            padding:1.6rem 1.5rem; background:var(--bg);
+            border:1px solid var(--border); border-radius:var(--radius);
+            transition:all .3s var(--ease);
+        }
+        .module:hover { border-color:var(--border-warm); box-shadow:var(--shadow-sm); }
+        .module-num {
+            flex-shrink:0; width:30px; height:30px; border-radius:50%;
+            background:var(--terra); color:#fff; font-size:.78rem; font-weight:800;
+            display:flex; align-items:center; justify-content:center; margin-top:.15rem;
+        }
+        .module h3 { font-size:1.02rem; font-weight:700; margin-bottom:.4rem; letter-spacing:-.01em; }
+        .module p { margin:0; font-size:.93rem; line-height:1.75; }
+
+        /* ═══ PER CHI ═══ */
+        .perchi { background:var(--bg-warm); }
+        .audience { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem; }
+        .aud-card {
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:var(--radius); padding:1.85rem 1.6rem;
+        }
+        .aud-card.yes { border-color:rgba(63,125,92,.28); }
+        .aud-card h3 {
+            font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+            margin-bottom:1.15rem;
+        }
+        .aud-card.yes h3 { color:var(--green); }
+        .aud-card.no h3 { color:var(--text-light); }
+        .aud-list { list-style:none; display:flex; flex-direction:column; gap:.85rem; }
+        .aud-list li {
+            font-size:.92rem; color:var(--text-sec); line-height:1.65;
+            padding-left:1.7rem; position:relative;
+        }
+        .aud-list li::before {
+            position:absolute; left:0; top:0; font-weight:800; font-size:.95rem;
+        }
+        .aud-card.yes .aud-list li::before { content:'✓'; color:var(--green); }
+        .aud-card.no .aud-list li::before { content:'—'; color:var(--text-light); }
+
+        /* ═══ CHI CONDUCE ═══ */
+        .conduce { background:var(--bg); }
+        .conduce-layout { display:grid; grid-template-columns:210px 1fr; gap:2.5rem; align-items:start; }
+        .conduce-photo {
+            width:100%; aspect-ratio:3/4; border-radius:var(--radius);
+            overflow:hidden; box-shadow:var(--shadow-photo); background:#EBE3D8;
+        }
+        .conduce-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+        .conduce h2 { margin-bottom:.35rem; }
+        .conduce-role { font-size:.9rem; color:var(--terra); font-weight:600; margin-bottom:1.25rem; }
+        .credentials { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.5rem; }
+        .cred {
+            font-size:.75rem; font-weight:600; color:var(--text-sec);
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:100px; padding:.4rem .9rem;
+        }
+
+        /* ═══ ISCRIZIONE ═══ */
+        .iscrizione { background:var(--bg-deep); }
+        .iscrizione .eyebrow { color:var(--amber); }
+        .iscrizione h2 { color:var(--text-on-dark); }
+        .iscrizione > .inner > p { color:rgba(240,237,232,.68); max-width:620px; }
+        .includes {
+            background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+            border-radius:var(--radius); padding:1.75rem 1.6rem; margin-top:2rem;
+        }
+        .includes-title {
+            font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+            color:var(--amber); margin-bottom:1.15rem;
+        }
+        .includes ul { list-style:none; display:flex; flex-direction:column; gap:.8rem; }
+        .includes li {
+            font-size:.93rem; color:rgba(240,237,232,.78); line-height:1.65;
+            padding-left:1.7rem; position:relative;
+        }
+        .includes li::before { content:'✓'; position:absolute; left:0; top:0; color:var(--amber); font-weight:800; }
+        .form-panel {
+            margin-top:1.5rem; background:var(--bg-white);
+            border-radius:var(--radius); padding:2rem 1.75rem;
+        }
+        .form-fallback { font-size:.78rem; color:rgba(240,237,232,.5); margin:.9rem 0 0; }
+        .form-fallback a { color:var(--amber); font-weight:600; }
+        .privacy-note { font-size:.72rem; color:rgba(240,237,232,.45); margin:.5rem 0 0; }
+        .privacy-note a { color:var(--amber); }
+
+        /* ═══ DOPO ═══ */
+        .dopo { background:var(--bg-white); border-top:1px solid var(--border); }
+        .path { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:2rem; }
+        .path-step {
+            background:var(--bg); border:1px solid var(--border);
+            border-radius:var(--radius); padding:1.75rem 1.5rem;
+        }
+        .path-step:first-child { border-color:var(--border-warm); background:var(--terra-soft); }
+        .path-label {
+            font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+            color:var(--terra); margin-bottom:.8rem;
+        }
+        .path-step h3 { font-size:1rem; font-weight:700; margin-bottom:.45rem; }
+        .path-step p { font-size:.88rem; margin:0; line-height:1.7; }
+
+        /* ═══ FAQ ═══ */
+        .faq { background:var(--bg-warm); }
+        .faq-list { display:flex; flex-direction:column; gap:1rem; margin-top:2rem; }
+        .faq-item {
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:var(--radius); padding:1.5rem 1.6rem;
+        }
+        .faq-item h3 { font-size:.98rem; font-weight:700; margin-bottom:.5rem; letter-spacing:-.01em; }
+        .faq-item p { margin:0; font-size:.92rem; line-height:1.75; }
+
+        /* ═══ CTA FINALE ═══ */
+        .final { background:var(--terra); text-align:center; }
+        .final h2 { color:#fff; margin-bottom:.6rem; }
+        .final p { color:rgba(255,255,255,.8); max-width:460px; margin:0 auto 2rem; }
+        .final .btn { background:#fff; color:var(--terra); }
+        .final .btn:hover { background:var(--bg-warm); box-shadow:0 10px 28px rgba(0,0,0,.16); }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding:2.75rem 1.75rem; border-top:1px solid var(--border); background:var(--bg); }
+        .footer-inner {
+            max-width:720px; margin:0 auto;
+            display:flex; flex-direction:column; align-items:center; gap:1.1rem; text-align:center;
+        }
+        .footer-name { font-size:.85rem; font-weight:700; color:var(--text); }
+        .footer-legal { font-size:.75rem; color:var(--text-light); line-height:1.85; }
+        .footer-legal a { color:var(--text-sec); }
+        .footer-bottom {
+            display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:center;
+            padding-top:1.1rem; border-top:1px solid var(--border); width:100%;
+        }
+        .footer-copy { font-size:.72rem; color:var(--text-light); }
+        .footer-copy a { color:inherit; text-decoration:underline; }
+        .footer-copy a:hover { color:var(--terra); }
+
+        /* ═══ REVEAL ═══ */
+        .reveal { opacity:0; transform:translateY(20px); transition:all .7s var(--ease-out); }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        @media (max-width:760px) {
+            section { padding:3.25rem 1.35rem; }
+            .hero { padding:3rem 1.35rem 3rem; }
+            .btn { width:100%; justify-content:center; }
+            .audience { grid-template-columns:1fr; }
+            .path { grid-template-columns:1fr; }
+            .conduce-layout { grid-template-columns:1fr; gap:1.75rem; }
+            .conduce-photo { max-width:190px; }
+            .form-panel { padding:1.25rem 1rem; }
+            .module { padding:1.35rem 1.15rem; gap:1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <a href="/" class="topbar-logo">Simona Fontana</a>
+    <a href="/" class="topbar-back">← Torna al sito</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+    <div class="inner">
+        <p class="eyebrow">Prima edizione · Provincia di Varese · Posti limitati</p>
+        <p class="hero-label">Seminario per imprenditori</p>
+        <h1>Cosa pensa davvero<br>chi compra la tua azienda</h1>
+        <p class="hero-sub">
+            2 ore per capire la logica degli acquirenti, leggere i tuoi bilanci con i loro occhi
+            e arrivare al tavolo preparato.
+        </p>
+        <div class="hero-meta">
+            <span class="chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                2 ore intensive
+            </span>
+            <span class="chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Provincia di Varese
+            </span>
+            <span class="chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Max 10 partecipanti
+            </span>
+        </div>
+        <a href="#iscrizione" class="btn">
+            Prenota il tuo posto
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="hero-note">Data in definizione. Chi è in lista riceve la conferma per primo.</p>
+    </div>
+</section>
+
+<!-- ══════════ IL PROBLEMA ══════════ -->
+<section class="why">
+    <div class="inner reveal">
+        <p class="eyebrow">Il problema</p>
+        <h2>Hai costruito tutto.<br><span>Ma non sai come appare agli occhi di chi compra.</span></h2>
+        <p>
+            Quando un acquirente valuta la tua azienda, guarda cose che probabilmente non ti aspetti.
+            Tu sai il valore di quello che hai creato. Quello che non sai è come ragiona chi hai davanti,
+            che cosa valuta, come decide.
+        </p>
+        <p>
+            Non sai cosa vedono loro, e questo ti mette in una posizione di svantaggio in un momento
+            importante e delicato della tua vita imprenditoriale.
+        </p>
+        <p><strong>Questo seminario ti porta dall'altra parte del tavolo.</strong></p>
+    </div>
+</section>
+
+<!-- ══════════ IL PROGRAMMA ══════════ -->
+<section class="programma">
+    <div class="inner reveal">
+        <p class="eyebrow">Il programma</p>
+        <h2>5 blocchi. 2 ore. Nessun tecnicismo inutile.</h2>
+        <div class="modules">
+            <div class="module">
+                <div class="module-num">1</div>
+                <div>
+                    <h3>Chi compra le PMI italiane</h3>
+                    <p>I tre profili acquirente, fondo di private equity, industriale e ETA/search fund, e cosa vuole ciascuno. Non sono uguali, non ragionano allo stesso modo, non pagano le stesse cose.</p>
+                </div>
+            </div>
+            <div class="module">
+                <div class="module-num">2</div>
+                <div>
+                    <h3>La loro logica di investimento</h3>
+                    <p>Perché un PE vuole crescita rapida e uscita in 5 anni. Perché un industriale paga il mercato, non il futuro. Perché un search fund cerca un'azienda da gestire, non solo da comprare.</p>
+                </div>
+            </div>
+            <div class="module">
+                <div class="module-num">3</div>
+                <div>
+                    <h3>Cosa guardano nei tuoi bilanci</h3>
+                    <p>EBITDA normalizzato, dipendenza dal titolare, concentrazione clienti, struttura del debito. Tradotto in parole semplici: dove vedono valore, dove vedono rischio, dove abbassano l'offerta.</p>
+                </div>
+            </div>
+            <div class="module">
+                <div class="module-num">4</div>
+                <div>
+                    <h3>Le emozioni del passaggio</h3>
+                    <p>Cedere un'azienda non è solo una transazione finanziaria. È uno dei momenti più difficili ed emotivamente intensi della vita di un imprenditore. Parliamo anche di questo.</p>
+                </div>
+            </div>
+            <div class="module">
+                <div class="module-num">5</div>
+                <div>
+                    <h3>I prossimi passi concreti</h3>
+                    <p>Porti a casa il materiale con le azioni prioritarie per sapere cosa fare nei prossimi 6-12 mesi, se stai pensando a una cessione.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ PER CHI È ══════════ -->
+<section class="perchi">
+    <div class="inner reveal">
+        <p class="eyebrow">Per chi è</p>
+        <h2>Fa per te?</h2>
+        <div class="audience">
+            <div class="aud-card yes">
+                <h3>Sì, se sei</h3>
+                <ul class="aud-list">
+                    <li>Imprenditore che pensa, anche solo vagamente, a una cessione nei prossimi 3-7 anni</li>
+                    <li>Erede o successore che vuole capire quanto vale davvero l'azienda di famiglia</li>
+                    <li>Titolare che ha già ricevuto offerte e non sapeva bene come valutarle</li>
+                    <li>Determinato a dare continuità alla tua azienda e vuoi arrivare preparato a parlarne</li>
+                </ul>
+            </div>
+            <div class="aud-card no">
+                <h3>Non fa per te se</h3>
+                <ul class="aud-list">
+                    <li>Cerchi un corso di finanza aziendale con formule e modelli</li>
+                    <li>Sei un professionista, commercialista o avvocato, che cerca aggiornamento tecnico</li>
+                    <li>Hai già venduto e conosci bene il processo</li>
+                    <li>Vuoi solo una valutazione della tua azienda, per quella c'è altro</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ CHI CONDUCE ══════════ -->
+<section class="conduce">
+    <div class="inner reveal">
+        <p class="eyebrow">Chi conduce il seminario</p>
+        <div class="conduce-layout">
+            <div class="conduce-photo">
+                <img src="Simona_Fontana.jpg" alt="Simona Fontana, Dottoressa Commercialista">
+            </div>
+            <div>
+                <h2>Simona Fontana</h2>
+                <p class="conduce-role">Dottoressa Commercialista e advisor M&A</p>
+                <p>
+                    Ho lavorato a Londra in Investment Banking, nel leveraged finance,
+                    e a Milano in consulenza, nel transaction advisory.
+                </p>
+                <p>
+                    Ho due esperienze imprenditoriali alle spalle, quindi so quanta fatica e dedizione
+                    ci vogliono per fare impresa. Ho lavorato con investitori, imparando come ragionano
+                    e cosa valorizzano.
+                </p>
+                <p>
+                    Oggi affianco imprenditori italiani a preparare il futuro delle proprie aziende.
+                    Il seminario nasce da quello che ho visto fare male e che si poteva evitare
+                    con una preparazione diversa.
+                </p>
+                <div class="credentials">
+                    <span class="cred">Investment Banking · Londra</span>
+                    <span class="cred">Consulenza · Milano</span>
+                    <span class="cred">Bocconi</span>
+                    <span class="cred">Dott.ssa Commercialista</span>
+                    <span class="cred">2 aziende fondate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ ISCRIZIONE ══════════ -->
+<section class="iscrizione" id="iscrizione">
+    <div class="inner reveal">
+        <p class="eyebrow">Iscrizione</p>
+        <h2>Dall'altra parte del tavolo</h2>
+        <p>
+            Prima edizione, massimo 10 partecipanti. Lascia i tuoi dati: ti rispondo entro 24 ore
+            con data, luogo e tutti i dettagli pratici.
+        </p>
+        <div class="includes">
+            <p class="includes-title">Cosa comprende</p>
+            <ul>
+                <li>2 ore di seminario con sessione Q&amp;A</li>
+                <li>Checklist con i tuoi prossimi passi concreti</li>
+                <li>Materiali di supporto da portare a casa</li>
+                <li>Massimo 10 partecipanti, si lavora su casi reali</li>
+            </ul>
+        </div>
+        <div class="form-panel">
+            <iframe data-tally-src="https://tally.so/embed/68zEde?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="872" frameborder="0" marginheight="0" marginwidth="0" title="Dall'altra parte del tavolo"></iframe>
+        </div>
+        <p class="form-fallback">Se il modulo non si carica, <a href="https://tally.so/r/68zEde" target="_blank" rel="noopener">apri il modulo di iscrizione qui</a>.</p>
+        <p class="privacy-note">Non condivido i tuoi dati con nessuno e non faccio spam. <a href="/privacy.html">Informativa privacy</a></p>
+    </div>
+</section>
+
+<!-- ══════════ E DOPO ══════════ -->
+<section class="dopo">
+    <div class="inner reveal">
+        <p class="eyebrow">E dopo il seminario?</p>
+        <h2>Il seminario è il primo passo, non l'unico.</h2>
+        <p>
+            Se dopo le due ore vuoi capire davvero a che punto sei e cosa fare in concreto,
+            possiamo lavorare insieme. Non è obbligatorio, ma l'opzione c'è.
+        </p>
+        <div class="path">
+            <div class="path-step">
+                <p class="path-label">Passo 1</p>
+                <h3>Il seminario</h3>
+                <p>Capisci il mercato e i tuoi punti di forza e di debolezza.</p>
+            </div>
+            <div class="path-step">
+                <p class="path-label">Passo 2</p>
+                <h3>Memo di fattibilità</h3>
+                <p>Analisi della tua azienda specifica: valutazione, appetibilità, timing.</p>
+            </div>
+            <div class="path-step">
+                <p class="path-label">Passo 3</p>
+                <h3>Advisory completo</h3>
+                <p>Ti affianco nella negoziazione con i potenziali acquirenti.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq">
+    <div class="inner reveal">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2>Hai dubbi?</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Non ho ancora deciso se voglio vendere. Ha senso che venga?</h3>
+                <p>Sì, anzi è il momento giusto. Più sai prima, meglio ti prepari. Molti imprenditori arrivano al processo di cessione con due o tre anni di ritardo rispetto all'ottimo. Il seminario ti aiuta a capire se e quando ha senso muoversi.</p>
+            </div>
+            <div class="faq-item">
+                <h3>La mia azienda è piccola. Ha comunque senso?</h3>
+                <p>Il seminario è pensato per PMI italiane, aziende da 1 a 20 milioni di fatturato, che sono esattamente quelle per cui il mercato M&amp;A è cambiato di più negli ultimi anni. Non serve essere una grande società.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Ci sarà un tentativo di vendermi qualcosa durante il seminario?</h3>
+                <p>No. Il seminario è contenuto, non una presentazione commerciale. Alla fine avrai un documento con i passi concreti per la tua situazione. Se poi vorrai approfondire insieme, l'opzione c'è, ma la scelta è tua.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Devo sapere qualcosa di finanza o di bilanci?</h3>
+                <p>No. Ho scelto intenzionalmente di non fare tecnicismi. Parleremo di dati aziendali, ma in modo che chiunque possa capire cosa guardano gli acquirenti, senza formule né acronimi.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quando e dove si tiene?</h3>
+                <p>La prima edizione si terrà in provincia di Varese. La data esatta è in definizione: iscriviti per ricevere la conferma appena disponibile.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ CTA FINALE ══════════ -->
+<section class="final">
+    <div class="inner reveal">
+        <h2>Prenota il tuo posto.</h2>
+        <p>Massimo 10 partecipanti. Prima edizione, provincia di Varese.</p>
+        <a href="#iscrizione" class="btn">
+            Prenota il tuo posto
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-name">Simona Fontana · Dottoressa Commercialista</div>
+        <div class="footer-legal">
+            Iscritta all'Ordine dei Dottori Commercialisti e degli Esperti Contabili di Varese, n. 690<br>
+            P.IVA 03603700125 · Largo Magnani 4, 21040 Vedano Olona (VA), Italia<br>
+            <a href="mailto:simona@simonafontana.com">simona@simonafontana.com</a> · PEC <a href="mailto:simo.fontana@pec.it">simo.fontana@pec.it</a>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2026 Simona Fontana · <a href="/privacy.html">Privacy</a> · <a href="#" onclick="sfCookiePreferences(); return false;">Preferenze cookie</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- Banner cookie + Analytics -->
+<script src="/cookie-consent.js" defer></script>
+
+<!-- Tally -->
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+<script>
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
